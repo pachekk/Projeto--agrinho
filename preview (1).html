@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agro Forte, Futuro Sustentável</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#f4fff4;
+      color:#1f2d1f;
+      overflow-x:hidden;
+    }
+
+    header{
+      width:100%;
+      height:100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 8%;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(5px);
+      z-index:1000;
+    }
+
+    nav h2{
+      color:#8cff66;
+      font-size:1.8rem;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#8cff66;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      max-width:900px;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    .hero p{
+      font-size:1.2rem;
+      max-width:850px;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#5fbf3f;
+      color:white;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#3e8e28;
+      transform:translateY(-3px);
+    }
+
+    section{
+      padding:90px 10%;
+    }
+
+    .sobre{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .sobre img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .sobre-text h2,
+    .cards h2,
+    .organizadores h2{
+      font-size:2.5rem;
+      color:#2c6b1f;
+      margin-bottom:20px;
+    }
+
+    .sobre-text p{
+      font-size:1.1rem;
+      line-height:1.8;
+    }
+
+    .cards{
+      background:#e9f8e4;
+      text-align:center;
+    }
+
+    .card-container{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      padding:35px 25px;
+      border-radius:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      color:#2c6b1f;
+      margin:15px 0;
+      font-size:1.4rem;
+    }
+
+    .card p{
+      line-height:1.7;
+    }
+
+    .organizadores{
+      text-align:center;
+    }
+
+    .logos{
+      margin-top:40px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+    }
+
+    .logo-box{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      width:250px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      font-weight:600;
+      color:#2c6b1f;
+    }
+
+    footer{
+      background:#183318;
+      color:white;
+      text-align:center;
+      padding:30px;
+    }
+
+    footer p{
+      opacity:0.9;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Agro Forte</h2>
+
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Tema</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#organizadores">Organizadores</a></li>
+    </ul>
+  </nav>
+
+  <header id="inicio">
+    <div class="hero">
+      <h1>AGRO FORTE, FUTURO SUSTENTÁVEL</h1>
+
+      <p>
+        Equilíbrio entre produção e meio ambiente.
+        Um concurso de programação promovido pelo SENAR-PR e SEED-PR
+        para incentivar inovação, tecnologia e sustentabilidade no campo.
+      </p>
+
+      <a href="#sobre" class="btn">Explorar Tema</a>
+    </div>
+  </header>
+
+  <section class="sobre" id="sobre">
+
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Natureza e agricultura">
+
+    <div class="sobre-text">
+      <h2>Sobre o Tema</h2>
+
+      <p>
+        O Concurso de Programação “Agro forte, futuro sustentável” busca
+        promover soluções criativas e tecnológicas para fortalecer o agronegócio
+        de forma sustentável.
+      </p>
+
+      <br>
+
+      <p>
+        A proposta incentiva estudantes a desenvolverem ideias que conectem
+        inovação, preservação ambiental e produtividade rural,
+        contribuindo para um futuro equilibrado entre tecnologia e natureza.
+      </p>
+    </div>
+  </section>
+
+  <section class="cards" id="objetivos">
+
+    <h2>Objetivos do Concurso</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>🌱 Sustentabilidade</h3>
+        <p>
+          Incentivar projetos que promovam práticas agrícolas sustentáveis
+          e preservação ambiental.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>💻 Tecnologia</h3>
+        <p>
+          Estimular a criação de soluções digitais inovadoras voltadas ao
+          agronegócio.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🚜 Agro Forte</h3>
+        <p>
+          Valorizar o papel do campo no desenvolvimento econômico e social
+          do Paraná.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🌎 Futuro Verde</h3>
+        <p>
+          Promover consciência ambiental e responsabilidade com os recursos
+          naturais.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="organizadores" id="organizadores">
+
+    <h2>Organizadores</h2>
+
+    <div class="logos">
+
+      <div class="logo-box">
+        SENAR-PR
+        <br>
+        Serviço Nacional de Aprendizagem Rural
+      </div>
+
+      <div class="logo-box">
+        SEED-PR
+        <br>
+        Secretaria de Estado da Educação
+      </div>
+
+      <div class="logo-box">
+        Governo do Paraná
+        <br>
+        Educação e Sustentabilidade
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>
+      © 2026 - Agro Forte, Futuro Sustentável | Concurso de Programação
+    </p>
+  </footer>
+
+</body>
+</html>
